@@ -1,0 +1,78 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+@layer components {
+  nav ul {
+    @apply lg:flex lg:gap-12 lg:items-center;
+  }
+
+  nav li a {
+    @apply hover:text-blue-custom;
+  }
+
+  .swiper-new {
+    .swiper-wrapper {
+      .swiper-slide {
+        img {
+          @apply w-[350px] h-[350px] bg-auto rounded;
+        }
+      }
+    }
+  }
+
+  .servicesContent {
+    p {
+      @apply font-medium text-text-content;
+    }
+  }
+  .servicesContent:nth-child(odd) {
+    @apply bg-blue-custom text-white text-center;
+    hr {
+      @apply w-[60px] text-center mx-auto justify-center h-0.5 text-white;
+    }
+  }
+
+  .servicesContent:nth-child(even) {
+    @apply bg-white text-blue-custom text-center;
+    hr {
+      @apply w-[60px] text-center mx-auto justify-center h-0.5 text-blue-custom;
+    }
+  }
+
+  .servicesContent1 {
+    p {
+      @apply font-medium text-text-content;
+    }
+  }
+  .servicesContent1:nth-child(even) {
+    @apply bg-blue-custom text-white text-center;
+    hr {
+      @apply w-[60px] text-center mx-auto justify-center h-0.5 text-white;
+    }
+  }
+
+  .servicesContent1:nth-child(odd) {
+    @apply bg-white text-blue-custom text-center;
+    hr {
+      @apply w-[60px] text-center mx-auto justify-center h-0.5 text-blue-custom;
+    }
+  }
+
+  .contactBackground {
+    background-image: url(assets/bannerContact.png);
+    @apply w-full bg-cover bg-no-repeat text-center py-10 lg:px-64 px-4;
+  }
+
+  .footer li a:hover {
+    @apply text-blue-custom;
+  }
+}
+
+#menu {
+  transition: max-height 0.3s ease-in-out;
+}

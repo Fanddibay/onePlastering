@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>One Plastering</title>
+    <!-- swiper js -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <!-- font awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link href="./output.css" rel="stylesheet" />
+  </head>
+  <body class="overflow-x-hidden bg-[#f9f9f9]">
+    <style>
+      * {
+        scroll-behavior: smooth;
+      }
+      .swiper-button-prev-new,
+      .swiper-button-next-new {
+        color: #000 !important; /* Ganti dengan warna yang diinginkan */
+        width: 44px !important;
+        height: 44px !important;
+      }
+
+      .swiper-pagination-new {
+        bottom: 10px !important; /* Sesuaikan posisinya */
+      }
+
+      .swiper-pagination-bullet {
+        background: #3559c7 !important; /* Ganti dengan warna yang diinginkan */
+      }
+
+      .swiper-button-prev1,
+      .swiper-button-next1 {
+        color: #3559c7 !important; /* Ganti dengan warna yang diinginkan */
+        width: 44px !important;
+        height: 44px !important;
+        background-color: #ff0025;
+      }
+
+      .swiper-pagination1 {
+        bottom: 10px !important; /* Sesuaikan posisinya */
+      }
+
+      .swiper-scrollbar1 {
+        background: #ccc !important; /* Sesuaikan dengan desain Anda */
+      }
+    </style>
+    <!-- nav -->
+    <nav
+      class="flex items-center justify-between px-6 py-4 lg:px-16 sticky top-0 bg-white z-50"
+    >
+      <div><img src="assets/logoBlack.png" alt="" /></div>
+      <div class="lg:hidden">
+        <button id="menu-btn" class="text-blue-custom focus:outline-none">
+          <svg
+            id="hamburger-icon"
+            class="w-6 h-6 block"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16m-7 6h7"
+            ></path>
+          </svg>
+          <svg
+            id="close-icon"
+            class="w-6 h-6 hidden"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M6 18L18 6M6 6l12 12"
+            ></path>
+          </svg>
+        </button>
+      </div>
+      <ul
+        id="menu"
+        class="hidden z-10 mt-4 justify-end text-center flex-col absolute bg-white w-full left-0 top-16 space-y-6 p-6 lg:flex lg:flex-row lg:space-y-0 lg:static lg:gap-12 lg:p-0 lg:bg-transparent lg:items-center transition-all duration-300 ease-in-out transform lg:transform-none"
+      >
+        <li><a href="#" class="block lg:inline-block">Home</a></li>
+        <li><a href="#aboutUs" class="block lg:inline-block">About Us</a></li>
+        <li>
+          <a href="#ourGallery" class="block lg:inline-block">Our Gallery</a>
+        </li>
+        <li>
+          <a href="#testimonial" class="block lg:inline-block">Testimonial</a>
+        </li>
+        <li><a href="#contactUs" class="block lg:inline-block">Contact</a></li>
+        <li>
+          <a
+            href="#"
+            class="block lg:inline-block px-4 py-3 border-blue-custom border-2 text-blue-custom rounded-full font-medium text-center hover:bg-blue-custom hover:border-white hover:text-white"
+            >Get a Free Quote</a
+          >
+        </li>
+      </ul>
+    </nav>
+    <!-- end nav -->
+    <!-- hero -->
+    <div class="container mx-auto mt-8">
+      <div
+        class="block sm:block lg:flex items-center justify-between px-4 lg:px-16 mt-12"
+      >
+        <div class="flex flex-col">
+          <h3
+            class="text-5xl lg:text-6xl font-bold lg:leading-[72px] text-center lg:text-start"
+          >
+            <span class="text-blue-custom">Building Strong</span>
+            <br class="hidden lg:block" />
+            Foundations with
+            <span class="text-orange-custom">
+              Expert <br class="hidden lg:block" />
+              Plastering</span
+            >
+          </h3>
+          <p
+            class="text-xl lg:text-2xl text-Text Color/1 lg:leading-[36px] my-4 text-center lg:text-start tracking-wider"
+          >
+            From Strong Foundations to Flawless <br />
+            Finishes, Onset Plastering Delivers <br />
+            Excellence in Every Project.
+          </p>
+          <a
+            href="#"
+            class="bg-blue-custom hover:bg-blue-900 px-6 py-4 rounded-xl text-white w-[180px] text-center lg:block hidden"
+            >Get a Free Quote</a
+          >
+        </div>
+        <div class="">
+          <!-- Slider main container -->
+          <div
+            class="swiper w-full sm:w-[50%] lg:w-[530px] mx-auto text-center justify-center bg-center"
+          >
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide">
+                <img class="" src="assets/hero1.png" alt="" />
+              </div>
+              <div class="swiper-slide">
+                <img class="" src="assets/hero2.png" alt="" />
+              </div>
+              <div class="swiper-slide">
+                <img class="" src="assets/hero3.png" alt="" />
+              </div>
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination text-center mx-auto"></div>
+
+            <!-- If we need navigation buttons
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div> -->
+
+            <!-- If we need scrollbar
+          <div class="swiper-scrollbar"></div> -->
+          </div>
+        </div>
+        <a
+          href="#"
+          class="bg-blue-custom px-6 py-4 rounded-xl text-white w-[180px] text-center lg:hidden block mt-12 mx-auto"
+          >Get a Free Quote</a
+        >
+      </div>
+    </div>
+    <!-- end hero -->
+
+    <!-- gallery -->
+    <section id="ourGallery">
+      <div class="container mx-auto mt-24">
+        <div class="hidden lg:block">
+          <div class="grid grid-cols-4 gap-4 px-16">
+            <div class="col-span-2">
+              <h5 class="font-bold text-5xl lg:text-text-heading1">
+                Our <span class="text-orange-custom">Gallery</span>
+              </h5>
+              <p class="pt-2 pb-8 text-xl lg:text-text-display">
+                Sydney Wide Plastering is your team of complete interior <br />
+                specialists. When you need plastering or gyprocking done in
+                <br />
+                Sydney, we are your first choice.
+              </p>
+              <a
+                href="#"
+                class="bg-blue-custom hover:bg-blue-900 rounded-xl text-text-mini1 text-white px-6 py-3"
+                >Enquire Now</a
+              >
+            </div>
+            <div>
+              <img src="assets/gallery1.png" alt="" />
+            </div>
+            <div>
+              <img src="assets/gallery2.png" alt="" />
+            </div>
+            <div>
+              <img src="assets/gallery3.png" alt="" />
+            </div>
+            <div>
+              <img src="assets/gallery4.png" alt="" />
+            </div>
+            <div>
+              <img src="assets/gallery5.png" alt="" />
+            </div>
+            <div>
+              <img src="assets/gallery6.png" alt="" />
+            </div>
+          </div>
+        </div>
+        <div class="block lg:hidden">
+          <div class="px-4 text-center">
+            <h5 class="font-bold text-text-heading1">
+              Our <span class="text-orange-custom">Gallery</span>
+            </h5>
+            <p class="pt-2 pb-8 text-text-display">
+              Sydney Wide Plastering is your team of complete interior
+              specialists. When you need plastering or gyprocking done in
+              Sydney, we are your first choice.
+            </p>
+            <a
+              href="#"
+              class="bg-blue-custom rounded-xl text-text-mini1 text-white px-6 py-3"
+              >Enquire Now</a
+            >
+            <div
+              class="swiper-new lg:w-[530px] mx-auto text-center justify-center bg-center mt-12"
+            >
+              <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide">
+                  <img src="assets/gallery1.png" alt="" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="assets/gallery2.png" alt="" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="assets/gallery3.png" alt="" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="assets/gallery4.png" alt="" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="assets/gallery5.png" alt="" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="assets/gallery6.png" alt="" />
+                </div>
+                <!-- Tambahkan slide lainnya sesuai kebutuhan -->
+              </div>
+
+              <!-- Pagination -->
+              <div class="swiper-pagination-new text-center mx-auto"></div>
+
+              <!-- Navigation buttons -->
+              <div class="swiper-button-prev-new"></div>
+              <div class="swiper-button-next-new"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- end gallery -->
+
+    <!-- testimonial -->
+    <!-- testimonial -->
+    <section id="testimonial">
+      <div class="mt-4 lg:mt-24 container mx-auto">
+        <div class="text-center mb-8">
+          <h5 class="font-semibold text-sm text-blue-custom text-center">
+            Testimonial
+          </h5>
+          <h6 class="font-medium text-5xl text-text-color">
+            What Our Client Said about us
+          </h6>
+        </div>
+        <div class="mySwiper relative">
+          <div class="swiper-wrapper px-4 md:px-24">
+            <div class="swiper-slide">
+              <div
+                class="p-14 bg-white rounded-2xl shadow border border-gray-100 flex-col justify-start items-start gap-4 inline-flex"
+              >
+                <p class="font-ligt text-lg text-gray-400">
+                  Ut enim ad minim veniam, quis nostrudexercitation ullamco
+                  laboris nisi ut aliquip ex ea commodo consequat aute irure
+                  sint amet occaecat cupidatat non proident”
+                </p>
+                <div class="flex gap-6 items-center">
+                  <img src="assets/avatar1.png" width="60px" alt="" />
+                  <div>
+                    <h5 class="font-bold text-lg text-text-color">
+                      John Carter
+                    </h5>
+                    <p class="font-light text-base">Ceo at Webflow Agency</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div
+                class="p-14 bg-white rounded-2xl shadow border border-gray-100 flex-col justify-start items-start gap-4 inline-flex"
+              >
+                <p class="font-ligt text-lg text-gray-400">
+                  Ut enim ad minim veniam, quis nostrudexercitation ullamco
+                  laboris nisi ut aliquip ex ea commodo consequat aute irure
+                  sint amet occaecat cupidatat non proident”
+                </p>
+                <div class="flex gap-6 items-center">
+                  <img src="assets/avatar2.png" width="60px" alt="" />
+                  <div>
+                    <h5 class="font-bold text-lg text-text-color">
+                      John Carter
+                    </h5>
+                    <p class="font-light text-base">Ceo at Webflow Agency</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div
+                class="p-14 bg-white rounded-2xl shadow border border-gray-100 flex-col justify-start items-start gap-4 inline-flex"
+              >
+                <p class="font-ligt text-lg text-gray-400">
+                  Ut enim ad minim veniam, quis nostrudexercitation ullamco
+                  laboris nisi ut aliquip ex ea commodo consequat aute irure
+                  sint amet occaecat cupidatat non proident”
+                </p>
+                <div class="flex gap-6 items-center">
+                  <img src="assets/avatar3.png" width="60px" alt="" />
+                  <div>
+                    <h5 class="font-bold text-lg text-text-color">
+                      John Carter
+                    </h5>
+                    <p class="font-light text-base">Ceo at Webflow Agency</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div
+                class="p-14 bg-white rounded-2xl shadow border border-gray-100 flex-col justify-start items-start gap-4 inline-flex"
+              >
+                <p class="font-ligt text-lg text-gray-400">
+                  Ut enim ad minim veniam, quis nostrudexercitation ullamco
+                  laboris nisi ut aliquip ex ea commodo consequat aute irure
+                  sint amet occaecat cupidatat non proident”
+                </p>
+                <div class="flex gap-6 items-center">
+                  <img src="assets/avatar2.png" width="60px" alt="" />
+                  <div>
+                    <h5 class="font-bold text-lg text-text-color">
+                      John Carter
+                    </h5>
+                    <p class="font-light text-base">Ceo at Webflow Agency</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="mt-4">
+            <div class="swiper-pagination1 mx-auto text-center"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- end testimonial -->
+
+    <!-- certification -->
+    <section id="certification">
+      <div class="mt-32 mx-auto container">
+        <div class="bg-blue-custom px-16 py-6 text-white">
+          <div class="block lg:flex items-center gap-12">
+            <img src="assets/AWCI.png" alt="" />
+            <div class="grid gap-y-4">
+              <h6 class="font-semibold text-text-heading-3">
+                Onset Plastering: Quality You Can Trust
+              </h6>
+              <p class="font-light text-text-mini2">
+                Onset Plastering is a proudly accredited member of the
+                Association of Wall and Ceiling Industries Queensland (AWCI).
+                With this prestigious accreditation, we adhere to the highest
+                standards of quality and craftsmanship in the plastering
+                industry. Our commitment to excellence ensures that every
+                project we undertake is completed with precision, durability,
+                and a flawless finish. Whether you're renovating, building new,
+                or simply enhancing your space, you can trust Onset Plastering
+                to deliver results that stand the test of time.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- end certification -->
+
+    <!-- our client -->
+    <section id="ourClient">
+      <div class="mx-auto container mt-4 bg-white py-4">
+        <h3 class="font-bold text-text-heading2 text-center">
+          Our <span class="text-orange-custom">Client</span>
+        </h3>
+        <div
+          class="grid grid-cols-2 lg:grid-cols-6 gap-12 items-center text-center justify-center px-16 mt-6"
+        >
+          <img src="assets/sponsor1.png" alt="" />
+          <img src="assets/sponsor2.png" alt="" />
+          <img src="assets/sponsor3.png" alt="" />
+          <img src="assets/sponsor4.png" alt="" />
+          <img src="assets/sponsor5.png" alt="" />
+          <img src="assets/sponsor6.png" alt="" />
+        </div>
+      </div>
+    </section>
+    <!-- end our client -->
+
+    <!-- services -->
+    <section id="services">
+      <div class="mx-auto container px-16 mt-24">
+        <div class="grid gap-y-1 text-center mb-6">
+          <h5 class="text-text-heading2 font-bold text-Text Color/1">
+            <span class="text-orange-custom">What’s Included</span> with Our
+            Offer
+          </h5>
+          <p class="text-Text Color/2 font-light text-text-mini1">
+            Transform Your Home with Our Premium Services
+          </p>
+        </div>
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-6">
+          <div
+            class="servicesContent justify-center ronded px-12 py-9 grid gap-y-6"
+          >
+            <img src="assets/Simplification.svg" class="mx-auto" alt="" />
+            <hr />
+            <p>Gyprock sheeting, plaster setting and cornicing</p>
+          </div>
+          <div
+            class="servicesContent justify-center ronded px-12 py-9 grid gap-y-6"
+          >
+            <img src="assets/renovation.svg" class="mx-auto" alt="" />
+            <hr />
+            <p>Residential new build & renovation work</p>
+          </div>
+          <div
+            class="servicesContent justify-center ronded px-12 py-9 grid gap-y-6"
+          >
+            <img src="assets/decoration.svg" class="mx-auto" alt="" />
+            <hr />
+            <p>Decorative conicing, plaster conice & decorative mopuldings</p>
+          </div>
+          <div
+            class="servicesContent justify-center ronded px-12 py-9 grid gap-y-6"
+          >
+            <img src="assets/level5.svg" class="mx-auto" alt="" />
+            <hr />
+            <p>Level 5 finishing</p>
+          </div>
+          <div
+            class="servicesContent1 justify-center ronded px-12 py-9 grid gap-y-6"
+          >
+            <img src="assets/demolition.svg" class="mx-auto" alt="" />
+            <hr />
+            <p>Demolition and reactification work</p>
+          </div>
+          <div
+            class="servicesContent1 justify-center ronded px-12 py-9 grid gap-y-6"
+          >
+            <img src="assets/bulkheads.svg" class="mx-auto" alt="" />
+            <hr />
+            <p>Install bulkheads and skylight plastering</p>
+          </div>
+          <div
+            class="servicesContent1 justify-center ronded px-12 py-9 grid gap-y-6"
+          >
+            <img src="assets/gridCellings.svg" class="mx-auto" alt="" />
+            <hr />
+            <p>Install Supended Cellings & grid cellings</p>
+          </div>
+          <div
+            class="servicesContent1 justify-center ronded px-12 py-9 grid gap-y-6"
+          >
+            <img src="assets/walls.svg" class="mx-auto" alt="" />
+            <hr />
+            <p>Commercial work, including building partition walls</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- end services -->
+
+    <!-- contact us -->
+    <section id="contactUs">
+      <div
+        class="container mx-auto mt-24 px-16 pt-20 bg-white border-t-[0.1px] border-[#bababa]"
+      >
+        <div class="contactBackground">
+          <h5 class="text-white font-bold text-text-heading2 mb-4">
+            Contact US
+          </h5>
+          <p class="text-white font-light text-text-content mb-10">
+            Explore our help center for helpful guides and tips. Can’t find what
+            your’re looking for? You can always reach out to our Customer
+            Support Team through live chat or email
+          </p>
+          <a
+            href="#"
+            class="bg-white hover:bg-blue-900 hover:text-white text-blue-custom rounded-full px-12 py-3"
+            >Call Us Now</a
+          >
+        </div>
+      </div>
+    </section>
+    <!-- end contact us -->
+    <!-- footer -->
+    <footer id="footer">
+      <div class="">
+        <div class="bg-bg-footer py-4 md:py-4">
+          <img
+            src="assets/logoWhite.png"
+            class="justify-center text-center mx-auto mb-4"
+            alt=""
+          />
+          <hr />
+          <div
+            class="grid grid-cols-2 lg:flex justify-between gap-x-32 gap-y-8 lg:gap-12 text-white mt-8 px-8 lg:px-16 mx-auto"
+          >
+            <div class="flex-col">
+              <h5 class="text-lg md:text-2xl font-bold text-blue-custom mb-4">
+                Contact
+              </h5>
+              <div class="grid address">
+                <div class="grid gap-y-6 pb-6 md:pb-32">
+                  <div class="flex gap-3 items-center">
+                    <i class="fa-solid fa-phone"></i>
+                    <a href="#">+1012 3456 789</a>
+                  </div>
+                  <div class="flex gap-3 items-center">
+                    <i class="fa-solid fa-envelope"></i>
+                    <a href="#">onsetplastering@gmail.com</a>
+                  </div>
+                  <div class="flex gap-3 items-center">
+                    <i class="fa-solid fa-map"></i>
+                    <a href="#">Sydney, Australia</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="grid gap-y-4">
+              <h5 class="text-lg md:text-2xl font-bold text-blue-custom">
+                Company
+              </h5>
+              <div class="grid gap-y-4">
+                <ul class="footer grid gap-y-6 pb-6 md:pb-12">
+                  <li class="flex gap-3 items-center">
+                    <a href="#discover">Home</a>
+                  </li>
+                  <li class="flex gap-3 items-center">
+                    <a href="#discover">Gallery</a>
+                  </li>
+                  <li class="flex gap-3 items-center">
+                    <a href="#blog">About Us</a>
+                  </li>
+                  <li class="flex gap-3 items-center">
+                    <a href="#aboutUs">Testimonial</a>
+                  </li>
+                  <li class="flex gap-3 items-center">
+                    <a href="#contactUs">Contact Us</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="grid gap-y-4">
+              <h5 class="text-lg md:text-2xl font-bold text-blue-custom">
+                Legal
+              </h5>
+              <div class="grid">
+                <ul class="footer grid gap-y-6 pb-6 md:pb-12">
+                  <li class="flex gap-3 items-center">
+                    <a href="#">Subscribe</a>
+                  </li>
+                  <li class="flex gap-3 items-center">
+                    <a href="#">Privacy Policy</a>
+                  </li>
+                  <li class="flex gap-3 items-center">
+                    <a href="#">Terms & Services</a>
+                  </li>
+                  <li class="flex gap-3 items-center">
+                    <a href="#">Terms of Use</a>
+                  </li>
+                  <li class="flex gap-3 items-center">
+                    <a href="#contactUs">Refund Policy</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="social justify-end">
+              <h5 class="text-lg md:text-2xl font-bold mb-2 text-blue-custom">
+                Folow us on
+              </h5>
+              <div class="flex gap-4">
+                <a href="#"
+                  ><i
+                    class="fa-brands fa-facebook fa-xl hover:text-blue-custom"
+                  ></i
+                ></a>
+                <a href="#"
+                  ><i
+                    class="fa-brands fa-instagram fa-xl hover:text-blue-custom"
+                  ></i
+                ></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr />
+        <div class="bg-bg-footer text-center text-white py-4">
+          <h5 class="font-semibold text-xs md:text-base">
+            ONSET PLASTERING © 2024. All Rights Reserved
+          </h5>
+        </div>
+      </div>
+    </footer>
+    <!-- end footer -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
