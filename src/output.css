@@ -828,6 +828,11 @@ nav li a:hover {
   margin-bottom: 1rem;
 }
 
+.mx-4 {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
 .mb-10 {
   margin-bottom: 2.5rem;
 }
@@ -999,8 +1004,16 @@ nav li a:hover {
   margin-bottom: calc(1.5rem * var(--tw-space-y-reverse));
 }
 
+.overflow-hidden {
+  overflow: hidden;
+}
+
 .overflow-x-hidden {
   overflow-x: hidden;
+}
+
+.\!overflow-x-hidden {
+  overflow-x: hidden !important;
 }
 
 .rounded-2xl {
@@ -1082,10 +1095,6 @@ nav li a:hover {
 
 .bg-center {
   background-position: center;
-}
-
-.p-12 {
-  padding: 3rem;
 }
 
 .p-14 {
@@ -1192,6 +1201,11 @@ nav li a:hover {
   line-height: 2rem;
 }
 
+.text-4xl {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+}
+
 .text-5xl {
   font-size: 3rem;
   line-height: 1;
@@ -1250,11 +1264,6 @@ nav li a:hover {
   line-height: 1rem;
 }
 
-.text-4xl {
-  font-size: 2.25rem;
-  line-height: 2.5rem;
-}
-
 .font-bold {
   font-weight: 700;
 }
@@ -1275,11 +1284,6 @@ nav li a:hover {
   letter-spacing: 0.05em;
 }
 
-.text-blue-700 {
-  --tw-text-opacity: 1;
-  color: rgb(29 78 216 / var(--tw-text-opacity));
-}
-
 .text-blue-custom {
   --tw-text-opacity: 1;
   color: rgb(53 89 199 / var(--tw-text-opacity));
@@ -1288,11 +1292,6 @@ nav li a:hover {
 .text-gray-400 {
   --tw-text-opacity: 1;
   color: rgb(156 163 175 / var(--tw-text-opacity));
-}
-
-.text-gray-700 {
-  --tw-text-opacity: 1;
-  color: rgb(55 65 81 / var(--tw-text-opacity));
 }
 
 .text-orange-custom {
@@ -1342,11 +1341,6 @@ body {
 .hover\:border-white:hover {
   --tw-border-opacity: 1;
   border-color: rgb(255 255 255 / var(--tw-border-opacity));
-}
-
-.hover\:bg-blue-700:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(29 78 216 / var(--tw-bg-opacity));
 }
 
 .hover\:bg-blue-900:hover {
@@ -1430,6 +1424,11 @@ body {
     position: static;
   }
 
+  .lg\:mx-auto {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   .lg\:mt-24 {
     margin-top: 6rem;
   }
@@ -1493,6 +1492,11 @@ body {
     padding-right: 4rem;
   }
 
+  .lg\:px-12 {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+
   .lg\:text-start {
     text-align: start;
   }
@@ -1513,6 +1517,10 @@ body {
 
   .lg\:text-text-heading1 {
     font-size: 64px;
+  }
+
+  .lg\:text-text-heading2 {
+    font-size: 48px;
   }
 
   .lg\:leading-\[36px\] {

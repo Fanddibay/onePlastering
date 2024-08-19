@@ -95,12 +95,9 @@ const swiperNew = new Swiper(".swiper-new", {
 
 const mySwiper = new Swiper(".mySwiper", {
   direction: "horizontal",
-  slidesPerView: 2.5,
-  spaceBetween: 10,
+  spaceBetween: 20,
   loop: true,
-  //   autoplay: {
-  //     delay: 5000,
-  //   },
+
   breakpoints: {
     // when window width is >= 320px
     320: {
@@ -109,16 +106,17 @@ const mySwiper = new Swiper(".mySwiper", {
     },
     // when window width is >= 480px
     480: {
-      slidesPerView: 1,
+      slidesPerView: 2,
+      spaceBetween: 20,
+    },
+    // when window width is >= 768px (tablet)
+    768: {
+      slidesPerView: 3,
       spaceBetween: 30,
     },
-    // when window width is >= 640px
-    640: {
-      slidesPerView: 2,
-      spaceBetween: 40,
-    },
-    1000: {
-      slidesPerView: 2.5,
+    // when window width is >= 1024px (desktop)
+    1024: {
+      slidesPerView: 3,
       spaceBetween: 40,
     },
   },
@@ -126,18 +124,13 @@ const mySwiper = new Swiper(".mySwiper", {
   // Enable keyboard navigation
   keyboard: {
     enabled: true,
-    onlyInViewport: true, // Hanya aktif jika swiper berada di viewport
+    onlyInViewport: true,
   },
 
   pagination: {
     el: ".swiper-pagination1",
-    clickable: true, // Ensure bullets are clickable
+    clickable: true,
   },
-
-  //   navigation: {
-  //     nextEl: ".swiper-button-prev1",
-  //     prevEl: ".swiper-button-prev1",
-  //   },
 
   scrollbar: {
     el: ".swiper-scrollbar1",
