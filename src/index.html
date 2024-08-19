@@ -22,46 +22,13 @@
     <link href="./output.css" rel="stylesheet" />
   </head>
   <body class="bg-[#f9f9f9]">
-    <style>
-      * {
-        scroll-behavior: smooth;
-      }
-      .swiper-button-prev-new,
-      .swiper-button-next-new {
-        color: #000 !important; /* Ganti dengan warna yang diinginkan */
-        width: 44px !important;
-        height: 44px !important;
-      }
-
-      .swiper-pagination-new {
-        bottom: 10px !important; /* Sesuaikan posisinya */
-      }
-
-      .swiper-pagination-bullet {
-        background: #3559c7 !important; /* Ganti dengan warna yang diinginkan */
-      }
-
-      .swiper-button-prev1,
-      .swiper-button-next1 {
-        color: #3559c7 !important; /* Ganti dengan warna yang diinginkan */
-        width: 44px !important;
-        height: 44px !important;
-        background-color: #ff0025;
-      }
-
-      .swiper-pagination1 {
-        bottom: 10px !important; /* Sesuaikan posisinya */
-      }
-
-      .swiper-scrollbar1 {
-        background: #ccc !important; /* Sesuaikan dengan desain Anda */
-      }
-    </style>
     <!-- nav -->
     <nav
       class="flex items-center justify-between px-6 py-4 lg:px-16 sticky top-0 bg-white z-50"
     >
-      <div><img src="assets/logoBlack.png" alt="" /></div>
+      <div>
+        <img src="assets/logoBlack.png" class="lg:w-full w-[175px]" alt="" />
+      </div>
       <div class="lg:hidden">
         <button id="menu-btn" class="text-blue-custom focus:outline-none">
           <svg
@@ -211,7 +178,7 @@
         >
           Get a Free Quote
         </h2>
-        <!-- please change the action email with your email to integration formsubmit feature -->
+        <!-- please change the action to code api to integration getform feature -->
         <form
           id="quote-form"
           method="POST"
@@ -649,7 +616,7 @@
         <div class="bg-bg-footer py-4 md:py-4">
           <img
             src="assets/logoWhite.png"
-            class="justify-center text-center mx-auto mb-4"
+            class="justify-center text-center mx-auto mb-4 w-[200px]"
             alt=""
           />
           <hr />

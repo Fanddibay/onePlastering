@@ -6,6 +6,40 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
+* {
+  scroll-behavior: smooth;
+}
+.swiper-button-prev-new,
+.swiper-button-next-new {
+  color: #000 !important; /* Ganti dengan warna yang diinginkan */
+  width: 44px !important;
+  height: 44px !important;
+}
+
+.swiper-pagination-new {
+  bottom: 10px !important; /* Sesuaikan posisinya */
+}
+
+.swiper-pagination-bullet {
+  background: #3559c7 !important; /* Ganti dengan warna yang diinginkan */
+}
+
+.swiper-button-prev1,
+.swiper-button-next1 {
+  color: #3559c7 !important; /* Ganti dengan warna yang diinginkan */
+  width: 44px !important;
+  height: 44px !important;
+  background-color: #ff0025;
+}
+
+.swiper-pagination1 {
+  bottom: 10px !important; /* Sesuaikan posisinya */
+}
+
+.swiper-scrollbar1 {
+  background: #ccc !important; /* Sesuaikan dengan desain Anda */
+}
+
 @layer components {
   nav ul {
     @apply lg:flex lg:gap-12 lg:items-center;

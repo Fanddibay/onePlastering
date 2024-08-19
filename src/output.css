@@ -818,6 +818,11 @@ nav li a:hover {
   grid-column: span 2 / span 2;
 }
 
+.mx-4 {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
@@ -826,11 +831,6 @@ nav li a:hover {
 .my-4 {
   margin-top: 1rem;
   margin-bottom: 1rem;
-}
-
-.mx-4 {
-  margin-left: 1rem;
-  margin-right: 1rem;
 }
 
 .mb-10 {
@@ -915,6 +915,30 @@ nav li a:hover {
 
 .w-full {
   width: 100%;
+}
+
+.w-1\/2 {
+  width: 50%;
+}
+
+.w-\[200px\] {
+  width: 200px;
+}
+
+.w-\[100px\] {
+  width: 100px;
+}
+
+.w-\[300px\] {
+  width: 300px;
+}
+
+.w-\[150px\] {
+  width: 150px;
+}
+
+.w-\[175px\] {
+  width: 175px;
 }
 
 .max-w-md {
@@ -1006,14 +1030,6 @@ nav li a:hover {
 
 .overflow-hidden {
   overflow: hidden;
-}
-
-.overflow-x-hidden {
-  overflow-x: hidden;
-}
-
-.\!overflow-x-hidden {
-  overflow-x: hidden !important;
 }
 
 .rounded-2xl {
@@ -1334,6 +1350,47 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
+* {
+  scroll-behavior: smooth;
+}
+
+.swiper-button-prev-new,
+.swiper-button-next-new {
+  color: #000 !important;
+  /* Ganti dengan warna yang diinginkan */
+  width: 44px !important;
+  height: 44px !important;
+}
+
+.swiper-pagination-new {
+  bottom: 10px !important;
+  /* Sesuaikan posisinya */
+}
+
+.swiper-pagination-bullet {
+  background: #3559c7 !important;
+  /* Ganti dengan warna yang diinginkan */
+}
+
+.swiper-button-prev1,
+.swiper-button-next1 {
+  color: #3559c7 !important;
+  /* Ganti dengan warna yang diinginkan */
+  width: 44px !important;
+  height: 44px !important;
+  background-color: #ff0025;
+}
+
+.swiper-pagination1 {
+  bottom: 10px !important;
+  /* Sesuaikan posisinya */
+}
+
+.swiper-scrollbar1 {
+  background: #ccc !important;
+  /* Sesuaikan dengan desain Anda */
+}
+
 #menu {
   transition: max-height 0.3s ease-in-out;
 }
@@ -1424,11 +1481,6 @@ body {
     position: static;
   }
 
-  .lg\:mx-auto {
-    margin-left: auto;
-    margin-right: auto;
-  }
-
   .lg\:mt-24 {
     margin-top: 6rem;
   }
@@ -1451,6 +1503,10 @@ body {
 
   .lg\:w-\[530px\] {
     width: 530px;
+  }
+
+  .lg\:w-full {
+    width: 100%;
   }
 
   .lg\:transform-none {
@@ -1487,14 +1543,14 @@ body {
     padding: 0px;
   }
 
-  .lg\:px-16 {
-    padding-left: 4rem;
-    padding-right: 4rem;
-  }
-
   .lg\:px-12 {
     padding-left: 3rem;
     padding-right: 3rem;
+  }
+
+  .lg\:px-16 {
+    padding-left: 4rem;
+    padding-right: 4rem;
   }
 
   .lg\:text-start {
@@ -1517,10 +1573,6 @@ body {
 
   .lg\:text-text-heading1 {
     font-size: 64px;
-  }
-
-  .lg\:text-text-heading2 {
-    font-size: 48px;
   }
 
   .lg\:leading-\[36px\] {
