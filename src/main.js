@@ -199,3 +199,94 @@ swiperContainer.addEventListener("wheel", function (e) {
     }
   }
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  const openPopups = document.querySelectorAll(".open-popup");
+  const popup = document.getElementById("popup");
+  const closePopup = document.getElementById("close-popup");
+  const quoteForm = document.getElementById("quote-form");
+  const formContainer = document.getElementById("form-container");
+  const successMessage = document.getElementById("success-message");
+  const closeSuccess = document.getElementById("close-success");
+
+  openPopups.forEach((openPopup) => {
+    openPopup.addEventListener("click", (e) => {
+      e.preventDefault();
+      popup.classList.remove("hidden");
+
+      closePopup.addEventListener("click", function () {
+        popup.classList.add("hidden");
+      });
+
+      popup.addEventListener("click", function (event) {
+        if (event.target === popup) {
+          popup.classList.add("hidden");
+        }
+      });
+    });
+  });
+
+  // Handle form submission
+  quoteForm.addEventListener("submit", function (event) {
+    setTimeout(() => {
+      // Hide form and show success message
+      formContainer.classList.add("hidden");
+      successMessage.classList.remove("hidden");
+
+      // Reset the form for the next use
+      quoteForm.reset();
+    }, 500); // Delay for opening new tab
+  });
+
+  // Close success message
+  closeSuccess.addEventListener("click", function () {
+    successMessage.classList.add("hidden");
+    popup.classList.add("hidden");
+    formContainer.classList.remove("hidden");
+  });
+});
+
+const formContainer = document.getElementById("form-container");
+const successMessage = document.getElementById("success-message");
+const quoteForm = document.getElementById("quote-form");
+const closeSuccess = document.getElementById("close-success");
+const submitForm = document.getElementById("submitForm");
+
+// // Event untuk pengiriman formulir
+// quoteForm.addEventListener("submit", function (event) {
+//   event.preventDefault();
+
+//   // Fetch form data
+//   const formData = new FormData(quoteForm);
+
+//   // Send form data via Fetch API to FormSubmit
+//   fetch(quoteForm.action, {
+//     method: "POST",
+//     headers: {
+//       Accept: "application/json",
+//     },
+//     body: formData,
+//   })
+//     .then((response) => {
+//       if (response.ok) {
+//         // Tampilkan pesan sukses dan sembunyikan form
+//         formContainer.classList.add("hidden");
+//         successMessage.classList.remove("hidden");
+//       } else {
+//         // Handle error
+//         alert("There was an issue with submitting your request.");
+//       }
+//     })
+//     .catch((error) => {
+//       console.error("Error:", error);
+//     });
+// });
+
+// // Event untuk menutup pop-up setelah pesan sukses
+// closeSuccess.addEventListener("click", function () {
+//   popup.classList.add("hidden");
+//   // Reset form untuk pengiriman berikutnya
+//   formContainer.classList.remove("hidden");
+//   successMessage.classList.add("hidden");
+//   quoteForm.reset();
+// });

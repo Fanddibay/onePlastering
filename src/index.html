@@ -110,12 +110,15 @@
         </li>
         <li><a href="#contactUs" class="block lg:inline-block">Contact</a></li>
         <li>
-          <a
-            href="mailto:oneplastering@gmail.com"
-            class="block lg:inline-block px-4 py-3 border-blue-custom border-2 text-blue-custom rounded-full font-medium text-center hover:bg-blue-custom hover:border-white hover:text-white"
-          >
-            Get a Free Quote
-          </a>
+          <div class="relative">
+            <!-- Link yang diklik untuk membuka pop-up -->
+            <a
+              href="#"
+              class="open-popup block lg:inline-block px-4 py-3 border-blue-custom border-2 text-blue-custom rounded-full font-medium text-center hover:bg-blue-custom hover:border-white hover:text-white"
+            >
+              Get a Free Quote
+            </a>
+          </div>
         </li>
       </ul>
     </nav>
@@ -144,26 +147,13 @@
             Finishes, Onset Plastering Delivers <br />
             Excellence in Every Project.
           </p>
-          <div class="lg:block hidden">
-            <!-- please input your email here, and activation your email to can access formsubmit feature -->
-            <form
-              action="https://formsubmit.co/youremail@gmail.com"
-              method="post"
-              class="items-center inline-flex"
+          <div class="lg:block hidden mt-4">
+            <a
+              href="submit"
+              class="bg-blue-custom open-popup hover:bg-blue-900 px-6 py-4 rounded-xl text-white w-[180px] text-center"
             >
-              <input
-                type="email"
-                class="border border-gray-200 py-4 px-6 w-[300px]"
-                placeholder="Please input your email"
-                name="email"
-              />
-              <button
-                type="submit"
-                class="bg-blue-custom hover:bg-blue-900 px-6 py-4 rounded-se rounded-ee text-white w-[180px] text-center"
-              >
-                Get a Free Quote
-              </button>
-            </form>
+              Get a Free Quote
+            </a>
           </div>
         </div>
         <div class="">
@@ -196,27 +186,115 @@
           </div>
         </div>
         <!-- please input your email here, and activation your email to can access formsubmit feature -->
-        <form
-          action="https://formsubmit.co/youremail.com"
-          method="post"
-          class="flex items-center gap-4 lg:hidden block mt-6"
+        <a
+          href="#"
+          class="bg-blue-custom open-popup hover:bg-blue-900 px-6 py-4 rounded-xl text-white w-[180px] text-center block lg:hidden"
         >
-          <input
-            type="email"
-            class="border border-gray-200 rounded py-4 px-6 w-1/2"
-            placeholder="Subscribe, please input your email"
-            name="email"
-          />
-          <button
-            type="submit"
-            class="bg-blue-custom hover:bg-blue-900 px-6 py-4 rounded-xl text-white w-[180px] text-center"
-          >
-            Get a Free Quote
-          </button>
-        </form>
+          Get a Free Quote
+        </a>
       </div>
     </div>
     <!-- end hero -->
+
+    <!-- pop up -->
+    <!-- Overlay dan pop-up -->
+    <div
+      id="popup"
+      class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 hidden z-50"
+    >
+      <div
+        id="form-container"
+        class="bg-white w-full max-w-md p-6 rounded-lg shadow-lg text-start"
+      >
+        <h2
+          class="text-2xl font-semibold text-white mb-4 bg-blue-custom text-center p-3"
+        >
+          Get a Free Quote
+        </h2>
+        <!-- please change the action email with your email to integration formsubmit feature -->
+        <form
+          id="quote-form"
+          method="POST"
+          target="_blank"
+          action="https://formsubmit.co/fandi.bayu110@gmail.com"
+        >
+          <div class="mb-4">
+            <label for="name" class="block text-blue-custom font-medium mb-2"
+              >Name</label
+            >
+            <input
+              type="text"
+              name="name"
+              id="name"
+              class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+              placeholder="Enter your name"
+              required
+            />
+          </div>
+          <div class="mb-4">
+            <label for="email" class="block text-blue-custom font-medium mb-2"
+              >Email</label
+            >
+            <input
+              type="email"
+              id="email"
+              name="email"
+              class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+              placeholder="Enter your email"
+              required
+            />
+          </div>
+          <div class="mb-4">
+            <label for="message" class="block text-blue-custom font-medium mb-2"
+              >Message</label
+            >
+            <textarea
+              id="message"
+              rows="4"
+              name="message"
+              class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+              placeholder="Enter your message"
+              required
+            ></textarea>
+          </div>
+          <div class="flex justify-end">
+            <button
+              type="button"
+              id="close-popup"
+              class="px-4 py-2 border border-blue-custom text-blue-custom rounded-lg mr-2 hover:bg-blue-custom hover:text-white"
+            >
+              Cancel
+            </button>
+            <button
+              type="submit"
+              id="submitForm"
+              class="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-custom"
+            >
+              Submit
+            </button>
+          </div>
+        </form>
+      </div>
+      <div
+        id="success-message"
+        class="bg-white w-full max-w-md p-8 rounded-lg shadow-lg text-center hidden mb-4"
+      >
+        <img
+          src="assets/successImg.png"
+          class="text-center mx-auto justify-center mb-4"
+          alt=""
+        />
+        <h2 class="text-4xl font-semibold text-blue-custom mb-2">Thank You!</h2>
+        <p>Your message has been successfully sent.</p>
+        <button
+          id="close-success"
+          class="mt-4 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-custom"
+        >
+          Close
+        </button>
+      </div>
+    </div>
+    <!-- end pop up -->
 
     <!-- gallery -->
     <section id="ourGallery">
@@ -234,8 +312,8 @@
                 Sydney, we are your first choice.
               </p>
               <a
-                href="mailto:oneplastering@gmail.com"
-                class="bg-blue-custom hover:bg-blue-900 rounded-xl text-text-mini1 text-white px-6 py-3"
+                href="#"
+                class="bg-blue-custom open-popup hover:bg-blue-900 rounded-xl text-text-mini1 text-white px-6 py-3"
                 >Enquire Now</a
               >
             </div>
@@ -446,7 +524,7 @@
 
     <!-- our client -->
     <section id="ourClient">
-      <div class="mx-auto container mt-4 bg-white py-4 mt-6">
+      <div class="mx-auto container bg-white py-4">
         <h3 class="font-bold text-text-heading2 text-center">
           Our <span class="text-orange-custom">Client</span>
         </h3>
