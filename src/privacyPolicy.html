@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>One Plastering - Privacy Policy</title>
+    <link rel="icon" href="assets/logo.ico" />
+    <!-- swiper js -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <!-- font awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link href="./output.css" rel="stylesheet" />
+  </head>
+  <body class="bg-[#f9f9f9]">
+    <!-- nav -->
+    <nav
+      class="flex items-center justify-between px-6 py-4 lg:px-16 sticky top-0 bg-white z-50"
+    >
+      <div>
+        <img src="assets/logoBlack.png" class="lg:w-full w-[175px]" alt="" />
+      </div>
+      <div class="lg:hidden">
+        <button id="menu-btn" class="text-blue-custom focus:outline-none">
+          <svg
+            id="hamburger-icon"
+            class="w-6 h-6 block"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16m-7 6h7"
+            ></path>
+          </svg>
+          <svg
+            id="close-icon"
+            class="w-6 h-6 hidden"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M6 18L18 6M6 6l12 12"
+            ></path>
+          </svg>
+        </button>
+      </div>
+      <ul
+        id="menu"
+        class="hidden z-10 mt-4 justify-end text-center flex-col absolute bg-white w-full left-0 top-16 space-y-6 p-6 lg:flex lg:flex-row lg:space-y-0 lg:static lg:gap-12 lg:p-0 lg:bg-transparent lg:items-center transition-all duration-300 ease-in-out transform lg:transform-none"
+      >
+        <li><a href="#" class="block lg:inline-block">Home</a></li>
+        <li><a href="#aboutUs" class="block lg:inline-block">About Us</a></li>
+        <li>
+          <a href="#ourGallery" class="block lg:inline-block">Our Gallery</a>
+        </li>
+        <li>
+          <a href="#testimonial" class="block lg:inline-block">Testimonial</a>
+        </li>
+        <li><a href="#contactUs" class="block lg:inline-block">Contact</a></li>
+        <li>
+          <div class="relative">
+            <!-- Link yang diklik untuk membuka pop-up -->
+            <a
+              href="#"
+              class="open-popup block lg:inline-block px-4 py-3 border-blue-custom border-2 text-blue-custom rounded-full font-medium text-center hover:bg-blue-custom hover:border-white hover:text-white"
+            >
+              Get a Free Quote
+            </a>
+          </div>
+        </li>
+      </ul>
+    </nav>
+    <!-- end nav -->
+
+    <!-- pop up -->
+    <!-- Overlay dan pop-up -->
+    <div
+      id="popup"
+      class="fixed container mx-auto inset-0 flex items-center justify-center bg-black bg-opacity-50 hidden z-50"
+    >
+      <div
+        id="form-container"
+        class="bg-white w-full max-w-md p-6 rounded-lg shadow-lg text-start mx-4"
+      >
+        <h2
+          class="text-2xl font-semibold text-white mb-4 bg-blue-custom text-center p-3"
+        >
+          Get a Free Quote
+        </h2>
+        <!-- please change the action to code api to integration getform feature -->
+        <form
+          id="quote-form"
+          method="POST"
+          target="_blank"
+          action="https://getform.io/f/blljwrxb"
+        >
+          <div class="mb-4">
+            <label for="name" class="block text-blue-custom font-medium mb-2"
+              >Name</label
+            >
+            <input
+              type="text"
+              name="name"
+              id="name"
+              class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+              placeholder="Enter your name"
+              required
+            />
+          </div>
+          <div class="mb-4">
+            <label for="email" class="block text-blue-custom font-medium mb-2"
+              >Email</label
+            >
+            <input
+              type="email"
+              id="email"
+              name="email"
+              class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+              placeholder="Enter your email"
+              required
+            />
+          </div>
+          <div class="mb-4">
+            <label for="message" class="block text-blue-custom font-medium mb-2"
+              >Message</label
+            >
+            <textarea
+              id="message"
+              rows="4"
+              name="message"
+              class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+              placeholder="Enter your message"
+              required
+            ></textarea>
+          </div>
+          <div class="flex justify-end">
+            <button
+              type="button"
+              id="close-popup"
+              class="px-4 py-2 border border-blue-custom text-blue-custom rounded-lg mr-2 hover:bg-blue-custom hover:text-white"
+            >
+              Cancel
+            </button>
+            <button
+              type="submit"
+              id="submitForm"
+              class="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-custom"
+            >
+              Submit
+            </button>
+          </div>
+        </form>
+      </div>
+      <div
+        id="success-message"
+        class="bg-white w-full max-w-md p-8 rounded-lg shadow-lg text-center hidden mb-4"
+      >
+        <img
+          src="assets/successImg.png"
+          class="text-center mx-auto justify-center mb-4"
+          alt=""
+        />
+        <h2 class="text-4xl font-semibold text-blue-custom mb-2">Thank You!</h2>
+        <p>Your message has been successfully sent.</p>
+        <button
+          id="close-success"
+          class="mt-4 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-custom"
+        >
+          Close
+        </button>
+      </div>
+    </div>
+    <!-- end pop up -->
+
+    <!-- privacy content -->
+    <div class="bg-gray-100">
+      <div
+        class="container mx-auto px-4 lg:px-64 text-justify justify-center py-8"
+      >
+        <h1
+          class="text-6xl bg-black text-white px-16 py-12 font-bold mb-4 text-center rounded"
+        >
+          Privacy Policy
+        </h1>
+
+        <p class="mb-4 text-center text-light">
+          This privacy policy sets out how our website uses and protects any
+          information that you give us when you use this website.
+        </p>
+
+        <div>
+          <h2 class="text-2xl font-bold mb-2">Security</h2>
+
+          <p class="mb-4">
+            We are committed to ensuring that your information is secure. In
+            order to prevent unauthorized access or disclosure, we have put in
+            place suitable physical, electronic, and managerial procedures to
+            safeguard and secure the information we collect online.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="text-2xl font-bold mb-2">Cookies</h2>
+
+          <p class="mb-4">
+            A cookie is a small file that asks permission to be placed on your
+            computer's hard drive. Once you agree, the file is added, and the
+            cookie helps analyze web traffic or lets you know when you visit a
+            particular site. Cookies allow web applications to respond to you as
+            an individual. The web application can tailor its operations to your
+            needs, likes, and dislikes by gathering and remembering information
+            about your preferences.
+          </p>
+
+          <p class="mb-4">
+            Overall, cookies help us provide you with a better website by
+            enabling us to monitor which pages you find useful and which you do
+            not. A cookie in no way gives us access to your computer or any
+            information about you, other than the data you choose to share with
+            us.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="text-2xl font-bold mb-2">Links to Other Websites</h2>
+
+          <p class="mb-4">
+            Our website may contain links to other websites of interest.
+            However, once you have used these links to leave our site, you
+            should note that we do not have any control over that other website.
+            Therefore, we cannot be responsible for the protection and privacy
+            of any information which you provide whilst visiting such sites and
+            such sites are not governed by this privacy statement. You should
+            exercise caution and look at the privacy statement applicable to the
+            website in question.
+          </p>
+        </div>
+
+        <div class="lg:flex items-start gap-12 justify-between">
+          <div class="lg:w-1/2">
+            <h2 class="text-2xl font-bold mb-2">How We Use the Information</h2>
+
+            <p class="mb-4">
+              We require this information to understand your needs and provide
+              you with a better service, and in particular for the following
+              reasons:
+            </p>
+
+            <ul class="list-disc list-inside mb-4">
+              <li>Internal record keeping</li>
+              <li>Improving our products and services</li>
+              <li>
+                Sending promotional emails about new products, special offers,
+                or other information which we think you may find interesting
+              </li>
+              <li>
+                From time to time, we may also use your information to contact
+                you for market research purposes. We may contact you by email,
+                phone, or mail. We may use the information to customize the
+                website according to your interests.
+              </li>
+            </ul>
+          </div>
+          <div class="lg:w-1/2">
+            <h2 class="text-2xl font-bold mb-2">Information We Collect</h2>
+
+            <p class="mb-4">We may collect the following information:</p>
+
+            <ul class="list-disc list-inside mb-4">
+              <li>Your name and contact information</li>
+              <li>Demographic information</li>
+              <li>
+                Other information relevant to customer surveys and/or offers
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div>
+          <h2 class="text-2xl font-bold mb-2">
+            Controlling Your Personal Information
+          </h2>
+
+          <p class="mb-4">
+            You may choose to restrict the collection or use of your personal
+            information in the following ways:
+          </p>
+
+          <ul class="list-disc list-inside mb-4">
+            <li>
+              If you have previously agreed to us using your personal
+              information for direct marketing purposes, you may change your
+              mind at any time by writing to or emailing us at [email protected]
+            </li>
+            <li>
+              We will not sell, distribute, or lease your personal information
+              to third parties unless we have your permission or are required by
+              law to do so. We may use your personal information to send you
+              promotional information about third parties which we think you may
+              find interesting if you tell us that you wish this to happen.
+            </li>
+            <li>
+              You may request details of personal information which we hold
+              about you. If you would like a copy of the information held on
+              you, please write to [Your Company Name, Address, City, State, Zip
+              Code] or email [email protected]
+            </li>
+            <li>
+              If you believe that any information we are holding on you is
+              incorrect or incomplete, please write to or email us as soon as
+              possible at the above address. We will promptly correct any
+              information found to be incorrect.
+            </li>
+          </ul>
+
+          <p class="mb-4">
+            This privacy policy is subject to change without notice.
+          </p>
+        </div>
+        <div class="text-end justify-end mt-6">
+          <a
+            href="index.html"
+            class="bg-blue-custom text-white px-12 mt-6 rounded hover:bg-blue-800 py-4"
+            >Back</a
+          >
+        </div>
+      </div>
+    </div>
+    <!-- end privacy content -->
+
+    <!-- footer -->
+    <footer id="footer">
+      <div class="">
+        <div class="bg-bg-footer py-4 md:py-4">
+          <img
+            src="assets/logoWhite.png"
+            class="justify-center text-center mx-auto mb-4 w-[200px]"
+            alt=""
+          />
+          <hr />
+          <div
+            class="grid grid-cols-2 lg:flex justify-between gap-x-32 gap-y-8 lg:gap-12 text-white mt-8 px-8 lg:px-16 mx-auto"
+          >
+            <div class="flex-col">
+              <h5 class="text-lg md:text-2xl font-bold text-blue-custom mb-4">
+                Contact
+              </h5>
+              <div class="grid address">
+                <div class="grid gap-y-6 pb-6 md:pb-32">
+                  <div class="flex gap-3 items-center">
+                    <i class="fa-solid fa-phone"></i>
+                    <a href="#">+1012 3456 789</a>
+                  </div>
+                  <div class="flex gap-3 items-center">
+                    <i class="fa-solid fa-envelope"></i>
+                    <a href="mailto:oneplastering@gmail.com"
+                      >Hello@oneplaster.com</a
+                    >
+                  </div>
+                  <div class="flex gap-3 items-center">
+                    <i class="fa-solid fa-map"></i>
+                    <a href="#">Sydney, Australia</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="grid gap-y-4">
+              <h5 class="text-lg md:text-2xl font-bold text-blue-custom">
+                Company
+              </h5>
+              <div class="grid gap-y-4">
+                <ul class="footer grid gap-y-6 pb-6 md:pb-12">
+                  <li class="flex gap-3 items-center">
+                    <a href="#discover">Home</a>
+                  </li>
+                  <li class="flex gap-3 items-center">
+                    <a href="#discover">Gallery</a>
+                  </li>
+                  <li class="flex gap-3 items-center">
+                    <a href="#blog">About Us</a>
+                  </li>
+                  <li class="flex gap-3 items-center">
+                    <a href="#aboutUs">Testimonial</a>
+                  </li>
+                  <li class="flex gap-3 items-center">
+                    <a href="#contactUs">Contact Us</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="grid gap-y-4">
+              <h5 class="text-lg md:text-2xl font-bold text-blue-custom">
+                Legal
+              </h5>
+              <div class="grid">
+                <ul class="footer grid gap-y-6 pb-6 md:pb-12">
+                  <li class="flex gap-3 items-center">
+                    <a href="#">Subscribe</a>
+                  </li>
+                  <li class="flex gap-3 items-center">
+                    <a href="#">Privacy Policy</a>
+                  </li>
+                  <li class="flex gap-3 items-center">
+                    <a href="#">Terms & Services</a>
+                  </li>
+                  <li class="flex gap-3 items-center">
+                    <a href="#">Terms of Use</a>
+                  </li>
+                  <li class="flex gap-3 items-center">
+                    <a href="#contactUs">Refund Policy</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="social justify-end">
+              <h5 class="text-lg md:text-2xl font-bold mb-2 text-blue-custom">
+                Folow us on
+              </h5>
+              <div class="flex gap-4">
+                <a href="#"
+                  ><i
+                    class="fa-brands fa-facebook fa-xl hover:text-blue-custom"
+                  ></i
+                ></a>
+                <a href="#"
+                  ><i
+                    class="fa-brands fa-instagram fa-xl hover:text-blue-custom"
+                  ></i
+                ></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr />
+        <div class="bg-bg-footer text-center text-white py-4">
+          <h5 class="font-semibold text-xs md:text-base">
+            ONSET PLASTERING © 2024. All Rights Reserved
+          </h5>
+        </div>
+      </div>
+    </footer>
+    <!-- end footer -->
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const openPopups = document.querySelectorAll(".open-popup");
+        const popup = document.getElementById("popup");
+        const closePopup = document.getElementById("close-popup");
+        const quoteForm = document.getElementById("quote-form");
+        const formContainer = document.getElementById("form-container");
+        const successMessage = document.getElementById("success-message");
+        const closeSuccess = document.getElementById("close-success");
+
+        openPopups.forEach((openPopup) => {
+          openPopup.addEventListener("click", (e) => {
+            e.preventDefault();
+            popup.classList.remove("hidden");
+
+            closePopup.addEventListener("click", function () {
+              popup.classList.add("hidden");
+            });
+
+            popup.addEventListener("click", function (event) {
+              if (event.target === popup) {
+                popup.classList.add("hidden");
+              }
+            });
+          });
+        });
+
+        // Handle form submission
+        quoteForm.addEventListener("submit", function (event) {
+          setTimeout(() => {
+            // Hide form and show success message
+            formContainer.classList.add("hidden");
+            successMessage.classList.remove("hidden");
+
+            // Reset the form for the next use
+            quoteForm.reset();
+          }, 500); // Delay for opening new tab
+        });
+
+        // Close success message
+        closeSuccess.addEventListener("click", function () {
+          successMessage.classList.add("hidden");
+          popup.classList.add("hidden");
+          formContainer.classList.remove("hidden");
+        });
+      });
+    </script>
+
+    <script src="main.js"></script>
+  </body>
+</html>

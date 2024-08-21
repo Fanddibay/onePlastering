@@ -909,8 +909,16 @@ nav li a:hover {
   width: 1.5rem;
 }
 
+.w-\[175px\] {
+  width: 175px;
+}
+
 .w-\[180px\] {
   width: 180px;
+}
+
+.w-\[200px\] {
+  width: 200px;
 }
 
 .w-full {
@@ -921,32 +929,20 @@ nav li a:hover {
   width: 50%;
 }
 
-.w-\[200px\] {
-  width: 200px;
-}
-
-.w-\[100px\] {
-  width: 100px;
-}
-
-.w-\[300px\] {
-  width: 300px;
-}
-
-.w-\[150px\] {
-  width: 150px;
-}
-
-.w-\[175px\] {
-  width: 175px;
-}
-
 .max-w-md {
   max-width: 28rem;
 }
 
 .transform {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.list-inside {
+  list-style-position: inside;
+}
+
+.list-disc {
+  list-style-type: disc;
 }
 
 .grid-cols-2 {
@@ -1048,6 +1044,10 @@ nav li a:hover {
   border-radius: 0.75rem;
 }
 
+.rounded {
+  border-radius: 0.25rem;
+}
+
 .border {
   border-width: 1px;
 }
@@ -1103,6 +1103,11 @@ nav li a:hover {
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
+.bg-gray-100 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(243 244 246 / var(--tw-bg-opacity));
 }
 
 .bg-opacity-50 {
@@ -1184,6 +1189,26 @@ nav li a:hover {
   padding-bottom: 2.25rem;
 }
 
+.py-8 {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.py-12 {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.px-52 {
+  padding-left: 13rem;
+  padding-right: 13rem;
+}
+
+.px-64 {
+  padding-left: 16rem;
+  padding-right: 16rem;
+}
+
 .pb-6 {
   padding-bottom: 1.5rem;
 }
@@ -1202,6 +1227,10 @@ nav li a:hover {
 
 .text-center {
   text-align: center;
+}
+
+.text-justify {
+  text-align: justify;
 }
 
 .text-start {
@@ -1278,6 +1307,16 @@ nav li a:hover {
 .text-xs {
   font-size: 0.75rem;
   line-height: 1rem;
+}
+
+.text-3xl {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+}
+
+.text-6xl {
+  font-size: 3.75rem;
+  line-height: 1;
 }
 
 .font-bold {
@@ -1410,6 +1449,11 @@ body {
   background-color: rgb(53 89 199 / var(--tw-bg-opacity));
 }
 
+.hover\:bg-blue-800:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(30 64 175 / var(--tw-bg-opacity));
+}
+
 .hover\:text-blue-custom:hover {
   --tw-text-opacity: 1;
   color: rgb(53 89 199 / var(--tw-text-opacity));
@@ -1509,6 +1553,10 @@ body {
     width: 100%;
   }
 
+  .lg\:w-1\/2 {
+    width: 50%;
+  }
+
   .lg\:transform-none {
     transform: none;
   }
@@ -1551,6 +1599,11 @@ body {
   .lg\:px-16 {
     padding-left: 4rem;
     padding-right: 4rem;
+  }
+
+  .lg\:px-64 {
+    padding-left: 16rem;
+    padding-right: 16rem;
   }
 
   .lg\:text-start {
