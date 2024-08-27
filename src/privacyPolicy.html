@@ -24,7 +24,7 @@
   <body class="bg-[#f9f9f9]">
     <!-- nav -->
     <nav
-      class="flex items-center justify-between px-6 py-4 lg:px-16 sticky top-0 bg-white z-50"
+      class="flex items-center container mx-auto justify-between px-6 py-4 lg:px-16 sticky top-0 bg-white z-50"
     >
       <div>
         <img src="assets/logoBlack.png" class="lg:w-full w-[175px]" alt="" />
@@ -356,95 +356,217 @@
             alt=""
           />
           <hr />
-          <div
-            class="grid grid-cols-2 lg:flex justify-between gap-x-32 gap-y-8 lg:gap-12 text-white mt-8 px-8 lg:px-16 mx-auto"
-          >
-            <div class="flex-col">
-              <h5 class="text-lg md:text-2xl font-bold text-blue-custom mb-4">
-                Contact
-              </h5>
-              <div class="grid address">
-                <div class="grid gap-y-6 pb-6 md:pb-32">
-                  <div class="flex gap-3 items-center">
-                    <i class="fa-solid fa-phone"></i>
-                    <a href="#">+1012 3456 789</a>
+          <div class="container mx-auto">
+            <!-- footer mobile -->
+            <div class="block lg:hidden">
+              <!-- div 1 footer -->
+              <div class="flex justify-between mx-auto text-white px-12 mt-6">
+                <!-- contact -->
+                <div>
+                  <h5
+                    class="text-lg md:text-2xl font-bold text-blue-custom mb-4"
+                  >
+                    Contact
+                  </h5>
+                  <div class="address mt-4">
+                    <div class="grid gap-y-6 pb-6 md:pb-32">
+                      <div class="flex gap-3 items-center">
+                        <i class="fa-solid fa-phone"></i>
+                        <a href="#">+1012 3456 789</a>
+                      </div>
+
+                      <div class="flex gap-3 items-center">
+                        <i class="fa-solid fa-envelope"></i>
+                        <a href="mailto:oneplastering@gmail.com"
+                          >Hello@oneplaster.com</a
+                        >
+                      </div>
+                      <div class="flex gap-3 items-center">
+                        <i class="fa-solid fa-map"></i>
+                        <a href="#">Sydney, Australia</a>
+                      </div>
+                    </div>
                   </div>
-                  <div class="flex gap-3 items-center">
-                    <i class="fa-solid fa-envelope"></i>
-                    <a href="mailto:oneplastering@gmail.com"
-                      >Hello@oneplaster.com</a
-                    >
+                </div>
+                <!-- company -->
+                <div>
+                  <h5 class="text-lg md:text-2xl font-bold text-blue-custom">
+                    Company
+                  </h5>
+                  <div class="grid gap-y-4 mt-4">
+                    <ul class="footer grid gap-y-6 pb-6 md:pb-12">
+                      <li class="flex gap-3 items-center">
+                        <a href="#discover">Home</a>
+                      </li>
+
+                      <li class="flex gap-3 items-center">
+                        <a href="#discover">Gallery</a>
+                      </li>
+                      <li class="flex gap-3 items-center">
+                        <a href="#blog">About Us</a>
+                      </li>
+                      <li class="flex gap-3 items-center">
+                        <a href="#aboutUs">Testimonial</a>
+                      </li>
+                      <li class="flex gap-3 items-center">
+                        <a href="#contactUs">Contact Us</a>
+                      </li>
+                    </ul>
                   </div>
-                  <div class="flex gap-3 items-center">
-                    <i class="fa-solid fa-map"></i>
-                    <a href="#">Sydney, Australia</a>
+                </div>
+              </div>
+              <!-- div 2 footer -->
+              <div class="flex justify-between mx-auto text-white px-12 mt-6">
+                <!-- legal -->
+                <div>
+                  <h5 class="text-lg md:text-2xl font-bold text-blue-custom">
+                    Legal
+                  </h5>
+                  <div class="grid gap-y-4 mt-4">
+                    <ul class="footer grid gap-y-6 pb-6 md:pb-12">
+                      <li class="flex gap-3 items-center">
+                        <a href="#">Subscribe</a>
+                      </li>
+                      <li class="flex gap-3 items-center">
+                        <a href="privacyPolicy.html">Privacy Policy</a>
+                      </li>
+                      <li class="flex gap-3 items-center">
+                        <a href="#">Terms & Services</a>
+                      </li>
+                      <li class="flex gap-3 items-center">
+                        <a href="#">Terms of Use</a>
+                      </li>
+                      <li class="flex gap-3 items-center">
+                        <a href="#contactUs">Refund Policy</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <!-- social -->
+                <div class="social justify-end">
+                  <h5
+                    class="text-lg md:text-2xl font-bold mb-2 text-blue-custom"
+                  >
+                    Folow us on
+                  </h5>
+                  <div class="flex gap-4 mt-4">
+                    <a href="#"
+                      ><i
+                        class="fa-brands fa-facebook fa-xl hover:text-blue-custom"
+                      ></i
+                    ></a>
+                    <a href="#"
+                      ><i
+                        class="fa-brands fa-instagram fa-xl hover:text-blue-custom"
+                      ></i
+                    ></a>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="grid gap-y-4">
-              <h5 class="text-lg md:text-2xl font-bold text-blue-custom">
-                Company
-              </h5>
-              <div class="grid gap-y-4">
-                <ul class="footer grid gap-y-6 pb-6 md:pb-12">
-                  <li class="flex gap-3 items-center">
-                    <a href="#discover">Home</a>
-                  </li>
-                  <li class="flex gap-3 items-center">
-                    <a href="#discover">Gallery</a>
-                  </li>
-                  <li class="flex gap-3 items-center">
-                    <a href="#blog">About Us</a>
-                  </li>
-                  <li class="flex gap-3 items-center">
-                    <a href="#aboutUs">Testimonial</a>
-                  </li>
-                  <li class="flex gap-3 items-center">
-                    <a href="#contactUs">Contact Us</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div class="grid gap-y-4">
-              <h5 class="text-lg md:text-2xl font-bold text-blue-custom">
-                Legal
-              </h5>
-              <div class="grid">
-                <ul class="footer grid gap-y-6 pb-6 md:pb-12">
-                  <li class="flex gap-3 items-center">
-                    <a href="#">Subscribe</a>
-                  </li>
-                  <li class="flex gap-3 items-center">
-                    <a href="#">Privacy Policy</a>
-                  </li>
-                  <li class="flex gap-3 items-center">
-                    <a href="#">Terms & Services</a>
-                  </li>
-                  <li class="flex gap-3 items-center">
-                    <a href="#">Terms of Use</a>
-                  </li>
-                  <li class="flex gap-3 items-center">
-                    <a href="#contactUs">Refund Policy</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div class="social justify-end">
-              <h5 class="text-lg md:text-2xl font-bold mb-2 text-blue-custom">
-                Folow us on
-              </h5>
-              <div class="flex gap-4">
-                <a href="#"
-                  ><i
-                    class="fa-brands fa-facebook fa-xl hover:text-blue-custom"
-                  ></i
-                ></a>
-                <a href="#"
-                  ><i
-                    class="fa-brands fa-instagram fa-xl hover:text-blue-custom"
-                  ></i
-                ></a>
+            <!-- end footer mobile -->
+            <div class="hidden lg:block">
+              <div
+                class="lg:flex justify-between gap-x-32 gap-y-8 lg:gap-12 text-white mt-8 px-8 lg:px-16 mx-auto"
+              >
+                <!-- contact -->
+                <div>
+                  <h5
+                    class="text-lg md:text-2xl font-bold text-blue-custom mb-4"
+                  >
+                    Contact
+                  </h5>
+                  <div class="address mt-4">
+                    <div class="grid gap-y-6 pb-6 md:pb-32">
+                      <div class="flex gap-3 items-center">
+                        <i class="fa-solid fa-phone"></i>
+                        <a href="#">+1012 3456 789</a>
+                      </div>
+
+                      <div class="flex gap-3 items-center">
+                        <i class="fa-solid fa-envelope"></i>
+                        <a href="mailto:oneplastering@gmail.com"
+                          >Hello@oneplaster.com</a
+                        >
+                      </div>
+                      <div class="flex gap-3 items-center">
+                        <i class="fa-solid fa-map"></i>
+                        <a href="#">Sydney, Australia</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- company -->
+                <div>
+                  <h5 class="text-lg md:text-2xl font-bold text-blue-custom">
+                    Company
+                  </h5>
+                  <div class="grid gap-y-4 mt-4">
+                    <ul class="footer grid gap-y-6 pb-6 md:pb-12">
+                      <li class="flex gap-3 items-center">
+                        <a href="#discover">Home</a>
+                      </li>
+
+                      <li class="flex gap-3 items-center">
+                        <a href="#discover">Gallery</a>
+                      </li>
+                      <li class="flex gap-3 items-center">
+                        <a href="#blog">About Us</a>
+                      </li>
+                      <li class="flex gap-3 items-center">
+                        <a href="#aboutUs">Testimonial</a>
+                      </li>
+                      <li class="flex gap-3 items-center">
+                        <a href="#contactUs">Contact Us</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <!-- legal -->
+                <div>
+                  <h5 class="text-lg md:text-2xl font-bold text-blue-custom">
+                    Legal
+                  </h5>
+                  <div class="grid gap-y-4 mt-4">
+                    <ul class="footer grid gap-y-6 pb-6 md:pb-12">
+                      <li class="flex gap-3 items-center">
+                        <a href="#">Subscribe</a>
+                      </li>
+                      <li class="flex gap-3 items-center">
+                        <a href="privacyPolicy.html">Privacy Policy</a>
+                      </li>
+                      <li class="flex gap-3 items-center">
+                        <a href="#">Terms & Services</a>
+                      </li>
+                      <li class="flex gap-3 items-center">
+                        <a href="#">Terms of Use</a>
+                      </li>
+                      <li class="flex gap-3 items-center">
+                        <a href="#contactUs">Refund Policy</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <!-- social -->
+                <div class="social justify-end">
+                  <h5
+                    class="text-lg md:text-2xl font-bold mb-2 text-blue-custom"
+                  >
+                    Folow us on
+                  </h5>
+                  <div class="flex gap-4 mt-4">
+                    <a href="#"
+                      ><i
+                        class="fa-brands fa-facebook fa-xl hover:text-blue-custom"
+                      ></i
+                    ></a>
+                    <a href="#"
+                      ><i
+                        class="fa-brands fa-instagram fa-xl hover:text-blue-custom"
+                      ></i
+                    ></a>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
